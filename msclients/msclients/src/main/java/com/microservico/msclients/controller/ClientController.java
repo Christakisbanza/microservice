@@ -5,6 +5,7 @@ import com.microservico.msclients.domain.Cliente;
 import com.microservico.msclients.domain.dto.ClienteCreateDto;
 import com.microservico.msclients.services.ClientServices;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.Optional;
 
-
+@Slf4j
 @RestController
 @RequestMapping("/clients")
 public class ClientController {
@@ -21,6 +22,11 @@ public class ClientController {
     @Autowired
     private ClientServices clientServices;
 
+    @GetMapping
+    public String test(){
+        log.info("A requisição veio aqui !!");
+        return "Ok";
+    }
 
     @PostMapping
     public ResponseEntity<Void> save (@RequestBody ClienteCreateDto clienteCreateDto){
