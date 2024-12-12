@@ -1,14 +1,16 @@
 package com.avaliadorcredito.msavaliadorcredito.domain.model;
 
-import lombok.Builder;
 
 import java.util.List;
 
-@Builder
+
 public class SituacaoCliente {
 
     private DadosCliente cliente;
     private List<CartaoCliente> cartaoClientes;
+
+
+
 
     public SituacaoCliente() {
     }
@@ -17,6 +19,20 @@ public class SituacaoCliente {
         this.cliente = cliente;
         this.cartaoClientes = cartaoClientes;
     }
+
+    public SituacaoCliente(DadosCliente cliente) {
+        this.cliente = cliente;
+    }
+
+
+
+
+    public static SituacaoCliente toSituacaoCliente(DadosCliente dadosCliente){
+        return new SituacaoCliente(dadosCliente);
+    }
+
+
+
 
     public DadosCliente getCliente() {
         return cliente;

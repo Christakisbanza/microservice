@@ -15,9 +15,6 @@ public class AvaliadorCreditoServices {
 
     public SituacaoCliente obterSituacaoCliente(String cpf){
         ResponseEntity<DadosCliente> dadosCliente = client.getByCpf(cpf);
-        return SituacaoCliente
-                .builder()
-                .cliente(dadosCliente.getBody())
-                .build();
+        return SituacaoCliente.toSituacaoCliente(dadosCliente.getBody());
     }
 }
