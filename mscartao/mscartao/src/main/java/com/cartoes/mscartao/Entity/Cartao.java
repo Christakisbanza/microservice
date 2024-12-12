@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
-@Data @NoArgsConstructor
+
 @Entity
 public class Cartao {
 
@@ -34,6 +34,57 @@ public class Cartao {
         this.name = name;
         this.bandeiraCartao = bandeiraCartao;
         this.renda = renda;
+        this.limiteBasico = limiteBasico;
+    }
+
+    public Cartao() {
+    }
+
+    public Cartao(Long id, BandeiraCartao bandeiraCartao, String name, BigDecimal renda, BigDecimal limiteBasico) {
+        this.id = id;
+        this.bandeiraCartao = bandeiraCartao;
+        this.name = name;
+        this.renda = renda;
+        this.limiteBasico = limiteBasico;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BandeiraCartao getBandeiraCartao() {
+        return bandeiraCartao;
+    }
+
+    public void setBandeiraCartao(BandeiraCartao bandeiraCartao) {
+        this.bandeiraCartao = bandeiraCartao;
+    }
+
+    public BigDecimal getRenda() {
+        return renda;
+    }
+
+    public void setRenda(BigDecimal renda) {
+        this.renda = renda;
+    }
+
+    public BigDecimal getLimiteBasico() {
+        return limiteBasico;
+    }
+
+    public void setLimiteBasico(BigDecimal limiteBasico) {
         this.limiteBasico = limiteBasico;
     }
 }
