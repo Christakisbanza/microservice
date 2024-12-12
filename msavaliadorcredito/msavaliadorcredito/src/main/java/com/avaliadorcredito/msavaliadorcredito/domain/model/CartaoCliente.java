@@ -3,9 +3,13 @@ package com.avaliadorcredito.msavaliadorcredito.domain.model;
 import java.math.BigDecimal;
 
 public class CartaoCliente {
+
+
     private String name;
     private String bandeira;
     private BigDecimal limiteLiberado;
+
+
 
     public CartaoCliente() {
     }
@@ -15,6 +19,9 @@ public class CartaoCliente {
         this.bandeira = bandeira;
         this.limiteLiberado = limiteLiberado;
     }
+
+
+
 
     public String getName() {
         return name;

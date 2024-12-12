@@ -11,7 +11,6 @@ public class SituacaoCliente {
 
 
 
-
     public SituacaoCliente() {
     }
 
@@ -20,15 +19,10 @@ public class SituacaoCliente {
         this.cartaoClientes = cartaoClientes;
     }
 
-    public SituacaoCliente(DadosCliente cliente) {
-        this.cliente = cliente;
-    }
 
 
-
-
-    public static SituacaoCliente toSituacaoCliente(DadosCliente dadosCliente){
-        return new SituacaoCliente(dadosCliente);
+    public static SituacaoCliente toSituacaoCliente(DadosCliente dadosCliente, List<CartaoCliente> cartaoClientes){
+        return new SituacaoCliente(dadosCliente, cartaoClientes);
     }
 
 
