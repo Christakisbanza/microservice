@@ -24,7 +24,6 @@ public class ClientController {
 
     @GetMapping
     public String test(){
-        log.info("A requisição veio aqui !!");
         return "Ok";
     }
 
