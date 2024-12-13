@@ -1,5 +1,6 @@
 package com.avaliadorcredito.msavaliadorcredito.feignclients;
 
+import com.avaliadorcredito.msavaliadorcredito.domain.model.Cartao;
 import com.avaliadorcredito.msavaliadorcredito.domain.model.CartaoCliente;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
@@ -13,5 +14,8 @@ public interface CartaoResource {
 
     @GetMapping(params = "cpf")
     ResponseEntity<List<CartaoCliente>> getCartaoByCliente(@RequestParam("cpf") String cpf);
+
+    @GetMapping(params = "renda")
+    ResponseEntity<List<Cartao>> getCartaoRendaMenorIgual(@RequestParam("renda") Long renda);
 
 }

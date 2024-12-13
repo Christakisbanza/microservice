@@ -1,15 +1,18 @@
 package com.avaliadorcredito.msavaliadorcredito.domain.model;
 
 public class DadosCliente {
+
     private Long id;
     private String name;
+    private Integer age;
 
     public DadosCliente() {
     }
 
-    public DadosCliente(Long id, String name) {
+    public DadosCliente(Long id, String name, Integer age) {
         this.id = id;
         this.name = name;
+        this.age = age;
     }
 
 
@@ -27,5 +30,13 @@ public class DadosCliente {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }
