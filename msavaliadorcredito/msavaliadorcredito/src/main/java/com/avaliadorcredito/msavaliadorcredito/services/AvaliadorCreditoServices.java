@@ -60,6 +60,7 @@ public class AvaliadorCreditoServices {
 
                 CartaoAprovado cartaoAprovado = new CartaoAprovado();
                 cartaoAprovado.setName(cartao.getName());
+                cartaoAprovado.setBandeira(cartao.getBandeiraCartao());
                 cartaoAprovado.setLimiteAprovado(limiteAprovado);
 
                 return cartaoAprovado;

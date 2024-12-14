@@ -6,13 +6,13 @@ public class Cartao {
 
     private Long id;
     private String name;
-    //private String bandeiraCartao;
+    private String bandeiraCartao;
     private BigDecimal limiteBasico;
 
     public Cartao(Long id, String name, String bandeiraCartao, BigDecimal limiteBasico) {
         this.id = id;
         this.name = name;
-        //this.bandeiraCartao = bandeiraCartao;
+        this.bandeiraCartao = bandeiraCartao;
         this.limiteBasico = limiteBasico;
     }
 
@@ -35,13 +35,13 @@ public class Cartao {
         this.name = name;
     }
 
-    /*public String getBandeira() {
+    public String getBandeiraCartao() {
         return bandeiraCartao;
     }
 
-    public void setBandeira(String bandeiraCartao) {
+    public void setBandeiraCartao(String bandeiraCartao) {
         this.bandeiraCartao = bandeiraCartao;
-    }*/
+    }
 
     public BigDecimal getLimiteBasico() {
         return limiteBasico;
