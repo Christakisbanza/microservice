@@ -1,9 +1,7 @@
 package com.avaliadorcredito.msavaliadorcredito.controller;
 
 
-import com.avaliadorcredito.msavaliadorcredito.domain.model.DadosAvaliacao;
-import com.avaliadorcredito.msavaliadorcredito.domain.model.DadosAvaliacaoResponse;
-import com.avaliadorcredito.msavaliadorcredito.domain.model.SituacaoCliente;
+import com.avaliadorcredito.msavaliadorcredito.domain.model.*;
 import com.avaliadorcredito.msavaliadorcredito.services.AvaliadorCreditoServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -36,4 +34,9 @@ public class AvaliadorCreditoController {
         return ResponseEntity.ok(dadosAvaliacaoResponse);
     }
 
+    @PostMapping("solicitacao-cartao")
+    public ResponseEntity<ProtocoloSolicitacaoCartao> solicitarCartao(@RequestBody DadosDeSolicitacaoEmissaoCartao dados){
+        ProtocoloSolicitacaoCartao protocoloSolicitacaoCartao = avaliadorCreditoServices.solicitarEmissaoCartao(dados);
+        return ResponseEntity.ok(protocoloSolicitacaoCartao);
+    }
 }
